@@ -1,4 +1,4 @@
-import express from 'express';
+import { Router } from 'express';
 import { 
   getAllBuses,
   getBusById,
@@ -6,7 +6,7 @@ import {
   getBusSchedule
 } from '../controllers/busController';
 
-const router = express.Router();
+const router = Router();
 
 // Get all buses
 router.get('/', getAllBuses);
@@ -17,7 +17,7 @@ router.get('/:id', getBusById);
 // Get all stations for a specific bus
 router.get('/:id/stations', getBusStations);
 
-// Get schedule for a specific bus at a specific station
-router.get('/:id/schedule/:stationId', getBusSchedule);
+// Get schedule for a specific bus at a specific station and direction
+router.get('/:id/schedule/:stationId/:direction', getBusSchedule);
 
 export { router }; 
