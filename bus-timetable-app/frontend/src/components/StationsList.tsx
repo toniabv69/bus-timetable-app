@@ -35,8 +35,8 @@ const StationsList = () => {
       try {
         // Fetch stations for both directions and combine
         const [res0, res1] = await Promise.all([
-          axios.get(`http://localhost:5000/api/stations?lang=${language}&direction=0`),
-          axios.get(`http://localhost:5000/api/stations?lang=${language}&direction=1`)
+          axios.get(`${process.env.VITE_BACKEND_URL}/api/stations?lang=${language}&direction=0`),
+          axios.get(`${process.env.VITE_BACKEND_URL}/api/stations?lang=${language}&direction=1`)
         ]);
         setStations([...res0.data, ...res1.data]);
       } catch (error) {
