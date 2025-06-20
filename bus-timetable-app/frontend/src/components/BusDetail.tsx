@@ -110,9 +110,9 @@ const BusDetail = () => {
     const fetchBusAndStations = async () => {
       try {
         const [busResponse, stations0Response, stations1Response] = await Promise.all([
-          axios.get(`${process.env.VITE_BACKEND_URL}/api/buses/${id}`),
-          axios.get(`${process.env.VITE_BACKEND_URL}/api/buses/${id}/stations?direction=0&lang=${language}`),
-          axios.get(`${process.env.VITE_BACKEND_URL}/api/buses/${id}/stations?direction=1&lang=${language}`)
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/buses/${id}`),
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/buses/${id}/stations?direction=0&lang=${language}`),
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/buses/${id}/stations?direction=1&lang=${language}`)
         ]);
         setBus(busResponse.data);
         setStationsDir0(stations0Response.data);
@@ -147,7 +147,7 @@ const BusDetail = () => {
       if (selectedStation !== null && direction !== null && dayType) {
         try {
           const response = await axios.get(
-            `${process.env.VITE_BACKEND_URL}/api/buses/${id}/schedule/${selectedStation}/${direction}?day_type=${dayType}`
+            `${import.meta.env.VITE_BACKEND_URL}/api/buses/${id}/schedule/${selectedStation}/${direction}?day_type=${dayType}`
           );
           setSchedule(response.data);
         } catch (err) {

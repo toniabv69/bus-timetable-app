@@ -76,8 +76,8 @@ const StationDetail = () => {
       try {
         // Fetch station for both directions and combine
         const [res0, res1] = await Promise.all([
-          axios.get(`${process.env.VITE_BACKEND_URL}/api/stations?lang=${language}&direction=0`),
-          axios.get(`${process.env.VITE_BACKEND_URL}/api/stations?lang=${language}&direction=1`)
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/stations?lang=${language}&direction=0`),
+          axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/stations?lang=${language}&direction=1`)
         ]);
         const found = [...res0.data, ...res1.data].find((s: Station) => s.id === Number(id));
         setStation(found);
@@ -92,7 +92,7 @@ const StationDetail = () => {
     const fetchBuses = async () => {
       setBusLoading(true);
       try {
-        const res = await axios.get(`${process.env.VITE_BACKEND_URL}/api/stations/${id}/buses`);
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/stations/${id}/buses`);
         setBusSchedules(res.data);
         // Select first bus by default if available
         if (res.data.length > 0 && !selectedBus) {
