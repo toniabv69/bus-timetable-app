@@ -82,7 +82,7 @@ const BusList = () => {
   useEffect(() => {
     const fetchBuses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/buses');
+        const response = await axios.get('${process.env.VITE_BACKEND_URL}/api/buses');
         setBuses(response.data);
         setLoading(false);
       } catch (err) {
