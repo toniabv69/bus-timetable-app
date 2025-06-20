@@ -174,16 +174,6 @@ const BusList = () => {
                       <Typography variant="h6" component="div">
                         {t('route')} {bus.number}
                       </Typography>
-                      <Chip
-                        label={t(`routeTypes.${bus.type}`)}
-                        size="small"
-                        sx={{
-                          bgcolor: `${getBusTypeColor(bus.type)}15`,
-                          color: getBusTypeColor(bus.type),
-                          fontWeight: 500,
-                          height: '20px'
-                        }}
-                      />
                     </Box>
                   }
                   sx={{

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   Container,
@@ -6,8 +6,6 @@ import {
   Box,
   CircularProgress,
   Paper,
-  Tabs,
-  Tab,
   Table,
   TableBody,
   TableCell,
@@ -15,7 +13,6 @@ import {
   TableHead,
   TableRow,
   Chip,
-  Grid,
   Card,
   CardContent,
   IconButton,
