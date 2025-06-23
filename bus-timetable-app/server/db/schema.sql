@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS schedule (
     station_id INTEGER REFERENCES stations(id) ON DELETE CASCADE,
     direction INTEGER NOT NULL DEFAULT 0, -- 0 for one way, 1 for the other
     arrival_time TIME NOT NULL,
-    day_type VARCHAR(20) NOT NULL, -- 'weekday', 'weekend'
+    day_type TEXT NOT NULL, -- 'weekday', 'weekend'
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
