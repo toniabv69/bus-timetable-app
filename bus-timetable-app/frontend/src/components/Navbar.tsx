@@ -1,10 +1,7 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Container, Box, Button, IconButton } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Button, IconButton } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import TimelineIcon from '@mui/icons-material/Timeline';
-import MapIcon from '@mui/icons-material/Map';
-import ScheduleIcon from '@mui/icons-material/Schedule';
 import LanguageIcon from '@mui/icons-material/Language';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useLanguage } from '../contexts/LanguageContext.tsx';

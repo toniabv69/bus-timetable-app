@@ -26,7 +26,7 @@ export const translations = {
       bus: 'Bus',
       tram: 'Tram',
       trolley: 'Trolley',
-      eBus: 'E-Bus',
+      "e-bus": 'E-Bus',
       metro: 'Metro'
     },
     searchByNumber: 'Search by number',

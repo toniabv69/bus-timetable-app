@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Box,
@@ -8,10 +8,7 @@ import {
   CardContent,
   CardActionArea,
   CircularProgress,
-  TextField,
-  ToggleButton,
-  ToggleButtonGroup,
-  Chip
+  TextField
 } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useLanguage } from '../contexts/LanguageContext.tsx';

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import {
-  Box, Typography, CircularProgress, Paper, Chip, Select, MenuItem, InputLabel, FormControl,
+  Box, Typography, CircularProgress, Paper, Select, MenuItem, InputLabel, FormControl,
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow, ToggleButton, ToggleButtonGroup
 } from '@mui/material';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';

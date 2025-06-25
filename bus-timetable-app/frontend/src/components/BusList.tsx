@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container,
   Grid,
   Card,
-  CardContent,
   Typography,
   CardActionArea,
   CircularProgress,
   Box,
-  Chip,
   CardHeader,
   Avatar,
   IconButton,
