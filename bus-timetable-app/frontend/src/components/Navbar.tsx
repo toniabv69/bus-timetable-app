@@ -17,7 +17,7 @@ const Navbar = () => {
     setLanguage(language === 'en' ? 'bg' : 'en');
   };
 
-  console.log(import.meta.env);
+  //console.log(import.meta.env);
 
   return (
     <AppBar position="sticky" color="primary" elevation={0}>
